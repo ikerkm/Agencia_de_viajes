@@ -11,8 +11,9 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
     width: 100%;
-    height: 45vw;
+    height: 90vh;
     background-image: url("../img/fondo1.jpg");
     background-size: 100% 110%;
 
@@ -27,6 +28,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
+    flex-wrap: wrap;
     z-index: 4;
     position: sticky;
     top: 0;
@@ -60,7 +62,7 @@ body {
 
 .nav_links a {
     padding: 30px;
-    font-size: 2.1vw;
+    font-size: 30px;
     text-decoration: none;
     color: white;
 
@@ -95,13 +97,13 @@ body {
     justify-content: center;
 
     flex-direction: column;
-    width: 20%;
+    width: 250px;
 }
 
 .logo img {
     width: auto;
     height: 60px;
-    ;
+
 
 }
 
@@ -109,7 +111,7 @@ body {
 .logo_text1 {
     color: #151837;
     align-self: center;
-    font-size: 1.5vw;
+    font-size: 20px;
 }
 
 
@@ -140,8 +142,8 @@ body {
 .span_button {}
 
 .el_boton {
-    height: 3.8vw;
-    width: 12vw;
+    height: 50px;
+    width: 170px;
 
     background-color: yellow;
 }
