@@ -1,0 +1,103 @@
+/* reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+img.center {
+
+    height: 45vh;
+    width: 40vw;
+    margin-top: 4em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+
+.izq {
+
+    background-color: white;
+    width: 50%;
+    height: 30em;
+    float: left;
+    /* background-image: url("/img/geekshubsMapa.jpg"); */
+
+}
+
+.drc {
+
+
+    background-color: white;
+    width: 50%;
+    height: 30em;
+    float: left;
+
+
+
+}
+
+
+
+.the_footer {
+
+    background-color: tomato;
+    display: flex;
+    flex-direction: row;
+}
+
+.izqf {
+
+    background-color: #191970;
+
+
+
+}
+
+.cntrf {
+
+    background-color: #191970;
+
+
+}
+
+.drcf {
+
+    background-color: #191970;
+
+
+}
+
+.bottomf {
+
+    color: white;
+    text-align: center;
+    width: 100%;
+    background-color: tomato;
+    display: inline-block;
+
+}
+
+.bformulario {
+
+    background-color: yellow;
+    padding: 1em;
+
+    margin-top: 2em;
+
+}
+
+#dform {
+
+    width: 40%;
+
+}
+
+#dformmessage {
+
+    width: 80.5%;
+}

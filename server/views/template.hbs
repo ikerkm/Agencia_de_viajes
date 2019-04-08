@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/styles/Style.css">
+    <link rel="stylesheet" type="text/css" href="/styles/datata.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/Scripts/template.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    {{> nav}}
+    <span class="first_div">
+
+        {{#if register}}
+
+        <span class="register_span">
+            <h2>REGISTRO</h2>
+            <a href="/login" class="you_linked">¿Ya estás registrado?</a>
+            <form action="/users" method="POST"><text>Nombre</text>
+                <input type="text" id="user_reg" name="name" class="input_reg">
+                <text>Email</text>
+                <input type="text" id="email_reg" name="email" class="input_reg">
+                <text>Contraseña</text>
+                <input type="text" id="pass_reg" name="password" class="input_reg">
+                <text>Repita contraseña</text>
+                <input type="text" id="con_pass_reg" class="input_reg">
+                <span class="terms">
+                    <input type="checkbox" id="check_terms">
+                    <text class="text_terms">Acepto los terminos y condiciones, así como la politica de
+                        privacidad.</text>
+                </span>
+                <input type="submit" value="Registrar" class="but_reg">
+            </form>
+        </span>
+
+        {{/if}}
+        {{#if register_ended}}
+        <span class="register_span">
+            <h2>Registro finalizado</h2>
+            ¡Enorabuena {{name}}! se ha enviado un email a su correo para confirmar su registro.<br>
+            Para volver a la pagina principal pulsa <a href="/login" class="you_linked">aquí</a>.
+
+        </span>
+
+
+        {{/if}}
+        {{#if login}}
+        <span class="login_span">
+            <form action="/users/auth" method="POST">
+                <h2>LOGIN</h2>
+                <a href="/register" class="you_linked">¿No estás registrado?</a>
+
+                <text>Email</text>
+                <input type="text" name="email" class="email_log">
+                <text>Contraseña</text>
+                <input type="password" name="password" class="pass_log">
+
+
+                <input type="submit" value="Iniciar sesion" class="but_reg">
+            </form>
+        </span>
+
+        {{/if}}
+
+
+        {{#if state}}
+        <div class="main_text">
+            <text class="viaja"><strong>¡Viaja!</strong> </text></br>
+            <text class="viaja2nd"><strong>¡Descubre lugares maravillosos!</strong></text></br>
+            <span class="span_button">
+                <input class="el_boton" type="button" value="Ver destinos">
+
+            </span>
+        </div>
+
+        {{/if}}
+    </span>
+
+
+    {{#if state}}
+    <section class="destiny_section" id="destiny_section">
+        <a href="#" id="a_destiny" class="previous round">&#8249;</a>
+        <span id="Destiny_1" class="Destiny">
+            <div class="destiny_text"><strong>Save 150$ pay only</strong></div>
+            <div class="destiny_price">359$</div><img src="/img/madrid.JPG" />
+            <div class="destiny_name">Madrid</div>
+        </span>
+        <span id="Destiny_2" class="Destiny">
+            <div class="destiny_text"><strong>Save 200$ pay only</strong></div>
+            <div class="destiny_price">400$</div><img src="/img/new_york.JPG" />
+            <div class="destiny_name">New York</div>
+        </span>
+
+        <span id="Destiny_3" class="Destiny">
+            <div class="destiny_text"><strong>Save 30$ pay only</strong></div>
+            <div class="destiny_price">700$</div><img src="/img/tokyo.JPG" />
+            <div class="destiny_name">Tokyo</div>
+        </span>
+
+
+        <span id="Destiny_4" class="Destiny">
+            <div class="destiny_text"><strong>Save 90$ pay only</strong></div>
+            <div class="destiny_price">300$</div><img src="/img/ciudad_mexico.JPG" />
+            <div class="destiny_name">Ciuidad de Mexico</div>
+        </span>
+        <span id="Destiny_5" class="Destiny">
+            <div class="destiny_text"><strong>Save 120$ pay only</strong></div>
+            <div class="destiny_price">799$</div><img src="/img/beijing.JPG" />
+            <div class="destiny_name">Beijing</div>
+        </span>
+        <span id="Destiny_6" class="Destiny">
+            <div class="destiny_text"><strong>Save 40$ pay only</strong></div>
+            <div class="destiny_price">550$</div><img src="/img/buenos_aires.JPG" />
+            <div class="destiny_name">Buenos aires</div>
+        </span>
+        <a href="#" id="a_destiny" class="next round">&#8250;</a>
+    </section>
+
+
+    <section>
+
+        <div id="izq" class="izq">
+
+            <img src="/img/geekshubsMapa.jpg" class="center">
+
+        </div>
+
+        <div class="drc">
+            <br>
+            <br>
+            <br>
+            <a>email: agv@dondemasteguste.es</a> <br>
+            <a>Teléfono: 15-15-15</a><br>
+            <a>Horario: No descansamos nunca!</a><br>
+
+            <input type="text" id="dform" placeholder="Name"> <input type="text" id="dform" placeholder="Email"><br>
+            <input type="text" id="dform" placeholder="Phone"> <input type="text" id="dform" placeholder="Pais"><br>
+            <input type="text" id="dformmessage" placeholder="Message"><br>
+            <button class="bformulario">ENVIAR</button>
+
+        </div>
+
+    </section>
+
+
+
+    {{/if}}
+
+    {{> footer}}
+</body>
+
+</html>
